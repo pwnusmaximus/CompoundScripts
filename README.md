@@ -16,6 +16,10 @@ Compound scripts allow the user to automate complicated workflows directly withi
 
 Also, a complicated workflow can be run in a single computation---no need to wait for finished jobs and resubmissions.
 
+## Special Formatting and file extention note
+1. While the extention of your input files can be anything, It's recommedned to keep them to the traditional ".inp" (input) or ".cmp" (compound) extentions.
+2. While not shown in any of the following examples, a compound script REQUIRES the `%Compound` block to come before any variables. Additionally, if you desire your job to be multi-threaded you will need the `%maxcore` and `%Pal NPROCSHARED` blocks to be above the `%Compound` block
+3. Note the `%maxcore` and `%Pal NPROCSHARED` blocks can only be supplied once. All subsequent New_Step sections will re-use the same memory and number of CPUs. 
 
 ## How do I contribute?
 
